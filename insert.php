@@ -7,7 +7,7 @@ if(isset($_POST['submit'])){
     $q = "insert into crudtable ('username','password') values ('$username','$password')";
     //$query = mysqli_query($con,$q);
     if(mysqli_query($con, $q)){
-        echo "jai shree ram  ";
+        echo "jai shree ";
         //header("location:login.php");
     }else{
         echo $q;
