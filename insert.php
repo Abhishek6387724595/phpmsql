@@ -1,17 +1,14 @@
 <?php
 
 include 'conn.php';
-if(isset($_POST['submit'])){
+
+//extract($_POST);
+if(isset($_POST['submit']))
+{
     $username = $_POST['username'];
     $password = $_POST['password'];
-    $q = "insert into crudtable ('username','password') values ('$username','$password')";
-    //$query = mysqli_query($con,$q);
-    if(mysqli_query($con, $q)){
-        echo "jai shree ram ";
-        //header("location:login.php");
-    }else{
-        echo $q;
-    }
+    $q = "INSERT INTO `crudtable`(`username`, `password`) VALUES ('$username','$password')";
+    $query = mysqli_query($con,$q);    
 }
 
 ?>
@@ -38,7 +35,7 @@ if(isset($_POST['submit'])){
         <form action="" method="post" class="form-group">
             <br><br><div class="card">
                 <div class="card-header bg-dark">
-                    <h1 class="text-white text-center">Insert1 Operations</h1>
+                    <h1 class="text-white text-center">Insert Operations</h1>
                 </div><br>
                  <label for="">Username: </label>
                  <input type="text" name="username" id="username" class="form-control" ><br>
